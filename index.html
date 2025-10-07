@@ -25,8 +25,8 @@
             <h3>How to Play:</h3>
             <ol style="text-align: left; max-width: 400px; margin: 0 auto 20px auto;">
                 <li>You'll get two numbers to challenge your brain.</li>
-                <li>Enter your answer in the **Answer** box.</li>
-                <li>Click **'Check Answer'** to see if you got it right!</li>
+                <li>**Choose the correct answer from 4 options!**</li>
+                <li>Click **'Ask for a Hint'** if you get stuck.</li>
             </ol>
             <button onclick="startGame()">Start The Quiz!</button>
         </div>
@@ -50,21 +50,21 @@
                 <span id="num2" class="challenge-num">?</span>
             </div>
 
-            <div class="input-group">
-                <label for="answerInput">💡 Your LCM Answer:</label>
-                <input type="number" id="answerInput" placeholder="Enter your LCM here">
+            <div class="options-group">
+                <p>Choose the correct LCM:</p>
+                <div id="optionsContainer">
+                    </div>
             </div>
-
+            
             <div class="button-group">
                 <button id="hintBtn" onclick="askHint()">Ask for a Hint</button>
-                <button id="checkBtn" onclick="checkAnswer()">Check Answer</button>
 
                 <button id="nextBtn" onclick="nextQuestion()" style="display: none;">
                     ✅ Next Question!
                 </button>
             </div>
             
-            <p id="lcmResult">Type your answer above and click 'Check Answer'!</p>
+            <p id="lcmResult">Select your answer above!</p>
         </div>
     </div>
 
