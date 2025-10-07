@@ -1,0 +1,250 @@
+/* Import a fun Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+
+body {
+    font-family: 'Fredoka', cursive;
+    background: linear-gradient(135deg, #f0f8ff, #ffecf2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* --- OVERLAY STYLES --- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.intro-content {
+    background-color: #f7f3ff;
+    color: #333;
+    padding: 30px 40px;
+    border-radius: 25px;
+    max-width: 650px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 8px solid #8338ec;
+}
+
+.intro-content h1 {
+    color: #ff6f91;
+    font-size: 3em;
+    text-shadow: 1px 1px 0 #ffeaa7;
+    margin-bottom: 25px;
+}
+
+.intro-content h3 {
+    color: #00bbf9;
+    text-align: center;
+    border-bottom: 2px dotted #00bbf9;
+    padding-bottom: 5px;
+}
+
+.intro-content button {
+    display: block;
+    width: 80%;
+    margin: 30px auto 10px auto;
+    background-color: #8338ec; 
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.4em;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #4f1d97;
+    transition: all 0.1s;
+}
+
+.intro-content button:active {
+    box-shadow: 0 2px 0 #4f1d97;
+    transform: translateY(3px);
+}
+
+/* --- MAIN QUIZ STYLES --- */
+.container {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 450px; 
+    width: 90%;
+    border: 8px solid #8338ec; 
+}
+
+h1 {
+    color: #ff6f91;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 0px #ffeaa7;
+}
+
+/* Scoreboard */
+.score-board {
+    margin-bottom: 25px;
+    padding: 10px;
+    background-color: #ff9770; 
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.score-board h2 {
+    color: white; 
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* LCM Section */
+.lcm-section {
+    background: #e6f7ff;
+    padding: 30px; 
+    border-radius: 20px;
+    border: 3px solid #00bbf9;
+    margin-top: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.lcm-section h2 {
+    color: #ff6f91;
+    font-size: 1.8em;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+}
+
+/* Question Numbers */
+.number-display {
+    font-size: 3em;
+    font-weight: bold;
+    color: #8338ec; 
+    margin: 20px 0 30px 0;
+}
+
+.challenge-num {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #ffeaa7; 
+    border-radius: 10px;
+    margin: 0 5px;
+}
+
+/* Answer Input */
+.input-group label {
+    display: block;
+    font-weight: bold;
+    color: #8338ec;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+#answerInput {
+    width: 60%; 
+    margin: 10px auto;
+    display: block;
+    padding: 15px;
+    font-size: 1.5em;
+    border: 3px solid #ff9770;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Buttons */
+.button-group {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #8338ec;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 5px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #4f1d97;
+    transition: all 0.1s;
+}
+
+button:active {
+    box-shadow: 0 2px 0 #4f1d97;
+    transform: translateY(3px);
+}
+
+#checkBtn {
+    /* Uses default purple style */
+}
+
+#nextBtn {
+    background-color: #00bbf9;
+    box-shadow: 0 5px 0 #0077b6;
+}
+
+#hintBtn {
+    background-color: #ff9770;
+    box-shadow: 0 3px 0 #cc7959;
+    font-size: 1em;
+    padding: 10px 18px;
+    margin-right: 10px;
+}
+
+#hintBtn:active {
+    box-shadow: 0 1px 0 #cc7959;
+    transform: translateY(2px);
+}
+
+#audio-icon {
+    font-size: 1.2em;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #27ae60;
+}
+
+/* Result Feedback */
+#lcmResult {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    min-height: 50px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.result-success {
+    background-color: #d8f7dc; 
+    color: #27ae60;
+    animation: pulse 1s ease-in-out;
+}
+
+.result-error {
+    background-color: #ffe0e0;
+    color: #e74c3c;
+    animation: shake 0.5s;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}

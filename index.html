@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LCM Quest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="greetingScreen" class="overlay" style="display: flex;">
+        <div class="intro-content">
+            <h1>Hi there! 👋 Welcome to the LCM Quest!</h1>
+            <p style="font-size: 1.2em; text-align: center;">Ready to become an expert in Least Common Multiples?</p>
+            <button onclick="showIntro()">Start Adventure!</button>
+        </div>
+    </div>
+
+    <div id="introScreen" class="overlay" style="display:none;">
+        <div class="intro-content">
+            <h1>The LCM Challenge Rules 🏆</h1>
+            
+            <h3>What is LCM?</h3>
+            <p>It's the **Least Common Multiple**—the smallest number that both challenge numbers divide into perfectly.</p>
+            
+            <h3>How to Play:</h3>
+            <ol style="text-align: left; max-width: 400px; margin: 0 auto 20px auto;">
+                <li>You'll get two numbers to challenge your brain.</li>
+                <li>Enter your answer in the **Answer** box.</li>
+                <li>Click **'Check Answer'** to see if you got it right!</li>
+            </ol>
+            <button onclick="startGame()">Start The Quiz!</button>
+        </div>
+    </div>
+
+    <div class="container" id="mainContent" style="display:none;">
+        <h1>🎯 LCM Quest</h1>
+
+        <div class="score-board">
+            <h2>Your Stars: <span id="score">0</span> ⭐ | Level: <span id="level">1</span></h2>
+        </div>
+
+        <div class="lcm-section">
+            <h2 id="questionText">Solve this! 
+                <span id="audio-icon" onclick="readQuestionAndHint()">🔊</span>
+            </h2>
+            
+            <div class="number-display">
+                <span id="num1" class="challenge-num">?</span>
+                and
+                <span id="num2" class="challenge-num">?</span>
+            </div>
+
+            <div class="input-group">
+                <label for="answerInput">💡 Your LCM Answer:</label>
+                <input type="number" id="answerInput" placeholder="Enter your LCM here">
+            </div>
+
+            <div class="button-group">
+                <button id="hintBtn" onclick="askHint()">Ask for a Hint</button>
+                <button id="checkBtn" onclick="checkAnswer()">Check Answer</button>
+
+                <button id="nextBtn" onclick="nextQuestion()" style="display: none;">
+                    ✅ Next Question!
+                </button>
+            </div>
+            
+            <p id="lcmResult">Type your answer above and click 'Check Answer'!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
